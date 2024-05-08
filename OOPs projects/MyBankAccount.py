@@ -48,11 +48,11 @@ Id: {self.id}
     
     def set_pin(self, pin):
         self.pin = pin
-        print(f'\nPIN has saved successfully.')
+        print(f'\nPIN has been saved successfully.')
     
     def update_pin(self, update_pin):
         self.pin = update_pin
-        print(f'\nPIN has updated successfully.')
+        print(f'\nPIN has been updated successfully.')
 
 
 #Main code
@@ -80,7 +80,7 @@ while True:
         address = input("Enter your Address: ")
 
         account_dict[name] = BankAccount(name, address)  # Create new account_dict[name] object
-        print('\nYour account has opened successfully.')
+        print('\nYour account has been opened successfully.')
 
         account_dict[name] = account_dict[name]  # Store the account_dict[name] object in the dictionary
         count += 1
@@ -104,7 +104,7 @@ while True:
                 if pin == account_dict[name].pin:
                     account_dict[name].withdraw_money(withdraw_amount)
                 else:
-                    print("\nPIN do not match\nTry again later.")
+                    print("\nPIN does not match\nTry again later.")
                     continue
         except:
             print('\nPlease set the PIN first, then try again.')
@@ -118,7 +118,7 @@ while True:
                 if pin == account_dict[name].pin:
                     account_dict[name].check_balance()
                 else:
-                    print("\nPIN do not match\nTry again later.")
+                    print("\nPIN does not match\nTry again later.")
                     continue
         except:
             print('\nPlease set the PIN first, then try again.')
@@ -153,7 +153,7 @@ while True:
                             new_pin = int(input("Enter the new PIN: "))
                             account_dict[name].update_pin(new_pin)
                         else:
-                            print("\nPIN do not match\nTry again later.")
+                            print("\nPIN does not match\nTry again later.")
                             continue      
                 except:
                     print("\nYou have to set the new PIN.")
@@ -168,7 +168,7 @@ while True:
                         set_pin = int(input("Enter the new PIN: "))
                         account_dict[name].set_pin(set_pin)
                     else:
-                        print("\nDetails do not match\nTry again later.")
+                        print("\nThe details did not match.\nTry again later.")
                 except:
                     print("\nPlease! First open the account.")
                     continue
